@@ -226,6 +226,11 @@ mark {
   background: #dc3545;
 }
 
+h2 {
+  padding: 20px;
+  text-align: end;
+}
+
 .checkout {
   max-width: 400px;
   margin: 40px auto;
