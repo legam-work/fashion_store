@@ -12,6 +12,7 @@ const Store = {
 
   subscribe(fn) {
     this.listeners.push(fn);
+    fn(this.getCart());
   },
 
   notify() {
