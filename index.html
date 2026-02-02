@@ -4,47 +4,54 @@
   <meta charset="UTF-8">
   <title>Fashion Store</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/MY/study/fashion_store/assets/css/main.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<header class="header">
-  <h1 class="logo">FASHION STORE</h1>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="Logo" style="height:40px;">
+    </div>
 
-  <div class="search">
-    <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </div>
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+      <i class="fa fa-search"></i>
+    </div>
 
-  <div class="filter">
-  <select id="priceFilter">
-    <option value="">Tất cả giá</option>
-    <option value="0-200000">Dưới 200k</option>
-    <option value="200000-400000">200k – 400k</option>
-    <option value="400000-9999999">Trên 400k</option>
-  </select>
+    <div class="filter">
+      <select id="priceFilter">
+        <option value="">Tất cả giá</option>
+        <option value="0-200000">Dưới 200k</option>
+        <option value="200000-300000">200k - 300k</option>
+        <option value="300000-1000000">Trên 300k</option>
+      </select>
 
-  <select id="sortPrice">
-    <option value="">Sắp xếp</option>
-    <option value="asc">Giá tăng dần</option>
-    <option value="desc">Giá giảm dần</option>
-  </select>
-</div>
+      <select id="sortPrice">
+        <option value="">Sắp xếp</option>
+        <option value="asc">Giá tăng dần</option>
+        <option value="desc">Giá giảm dần</option>
+      </select>
+    </div>
 
-  <a class="cart" href="/MY/study/fashion_store/cart.php">
-    🛒 <span id="cart-count">0</span>
-  </a>
-</header>
+    <a href="cart.html" class="cart">
+      <i class="fa fa-shopping-cart"></i>
+      (<span id="cart-count">0</span>)
+    </a>
+  </header>
 
-<section class="products" id="product-list"></section>
+  <!-- PRODUCTS -->
+  <section class="products" id="product-list"></section>
 
-<script src="/MY/study/fashion_store/assets/js/store.js"></script>
-<script src="/MY/study/fashion_store/assets/js/main.js"></script>
+  <!-- TOAST -->
+  <div id="toast"></div>
 
-<div id="toast"></div>
-
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,48 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <title>Giỏ hàng</title>
-  <link rel="stylesheet" href="/MY/study/fashion_store/assets/css/main.css">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<header class="header">
-  <h1 class="logo">GIỎ HÀNG</h1>
-  <a class="cart" href="/MY/study/fashion_store/index.php">⬅ Quay lại shop</a>
-</header>
+  <header class="header">
+    <h1 class="logo">GIỎ HÀNG</h1>
+    <a href="index.html" class="cart">← Quay lại</a>
+  </header>
 
-<section class="cart-page">
-  <table class="cart-table">
-    <thead>
-      <tr>
-        <th>Sản phẩm</th>
-        <th>Giá</th>
-        <th>Số lượng</th>
-        <th>Tạm tính</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody id="cart-body"></tbody>
-  </table>
+  <div class="cart-page">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Sản phẩm</th>
+          <th>Giá</th>
+          <th>Số lượng</th>
+          <th>Tạm tính</th>
+          <th>Xóa</th>
+        </tr>
+      </thead>
+      <tbody id="cart-body"></tbody>
+    </table>
 
-  <h2>Tổng tiền: <span id="total-price">0</span>đ</h2>
+    <h2>Tổng tiền: <span id="total-price">0</span> đ</h2>
 
-  <form id="checkout-form">
-    <input name="name" placeholder="Họ tên" required>
-    <input name="phone" placeholder="Số điện thoại" required>
-    <textarea name="address" placeholder="Địa chỉ" required></textarea>
-    <input type="hidden" id="total-input" name="total">
-    <button type="submit">Đặt hàng</button>
-  </form>
-</section>
+    <!-- FORM DEMO -->
+    <form id="checkout-form">
+      <h3>Thông tin đặt hàng</h3>
+      <input type="text" name="name" placeholder="Họ tên" required>
+      <input type="text" name="phone" placeholder="Số điện thoại" required>
+      <textarea name="address" placeholder="Địa chỉ" required></textarea>
 
+      <input type="hidden" id="total-input" value="0">
 
-<script src="/MY/study/fashion_store/assets/js/store.js"></script>
-<script src="./assets/js/cart.js?v=2"></script>
+      <button type="submit">ĐẶT HÀNG</button>
+    </form>
+  </div>
 
-<div id="toast"></div>
-
+  <script src="assets/js/cart.js"></script>
 </body>
 </html>
