@@ -248,6 +248,8 @@ mark {
 }
 
 .btn-checkout {
+  width: 190px;
+  height: 60px;
   background-color: #000;
   color: #fff;
   font-size: 25px;
