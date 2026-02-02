@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Giỏ hàng</title>
+  <link rel="stylesheet" href="/MY/study/fashion_store/assets/css/main.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 class="logo">GIỎ HÀNG</h1>
+  <a class="cart" href="/MY/study/fashion_store/index.php">⬅ Quay lại shop</a>
+</header>
+
+<section class="cart-page">
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>Sản phẩm</th>
+        <th>Giá</th>
+        <th>Số lượng</th>
+        <th>Tạm tính</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="cart-body"></tbody>
+  </table>
+
+  <h2>Tổng tiền: <span id="total-price">0</span>đ</h2>
+
+  <form id="checkout-form">
+    <input name="name" placeholder="Họ tên" required>
+    <input name="phone" placeholder="Số điện thoại" required>
+    <textarea name="address" placeholder="Địa chỉ" required></textarea>
+    <input type="hidden" id="total-input" name="total">
+    <button type="submit">Đặt hàng</button>
+  </form>
+</section>
+
+
+<script src="/MY/study/fashion_store/assets/js/store.js"></script>
+<script src="./assets/js/cart.js?v=2"></script>
+
+<div id="toast"></div>
+
+</body>
+</html>
