@@ -247,6 +247,12 @@ mark {
   cursor: pointer;
 }
 
+.btn-checkout {
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+}
+
 
 @keyframes slideIn {
   from { opacity: 0; transform: translateX(50px); }
