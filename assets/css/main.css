@@ -248,9 +248,12 @@ mark {
 }
 
 .btn-checkout {
-  color: white;
-  font-size: 17px;
+  background-color:#000;
+  color: #fff;
+  font-size: 29px;
   font-weight: 600;
+  text-decoration: none;
+  padding: 15px 30px;
 }
 
 
