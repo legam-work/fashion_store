@@ -60,6 +60,18 @@ const products = [
     price: 214000, 
     image: "https://down-vn.img.susercontent.com/file/vn-11134207-820l4-megug7ccejuv9d.webp" 
   },
+  { 
+    id: 11, 
+    name: "Áo Dài Tết Châu Vũ , Chất Liệu Gấm Thêu Họa Tiết Dày Dặn Tông Màu Da Dễ Mặc", 
+    price: 359000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-820l4-mgokygbs9nnz7f.webp" 
+  },
+  { 
+    id: 12, 
+    name: "Váy Yếm Nhung Nữ Viền Ren Chân Váy Phối Áo Ren Tay Loe Cổ Cao Siêu Xinh Tiểu Thư Sang Chảnh", 
+    price: 460000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-820l4-misbkse71a0y19.webp" 
+  },
 ];
 
 // ================= STATE =================
