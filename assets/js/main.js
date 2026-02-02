@@ -1,8 +1,65 @@
 // ================= DATA =================
 const products = [
-  { id: 1, name: "Áo thun Unisex", price: 199000, image: "https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m7umz5u082v748.webp" },
-  { id: 2, name: "Váy hai dây", price: 249000, image: "https://down-vn.img.susercontent.com/file/vn-11134201-7ras8-mamyg7k9ie2p02.webp" },
-  { id: 3, name: "Áo sơ mi nữ", price: 299000, image: "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m4gwwn94y5zj95.webp" }
+  { 
+    id: 1, 
+    name: "Áo thun Unisex Tay Lỡ Mã TN BUNNY Chất Cotton Mềm Mịn Co Dãn Thoáng Mát Form Rộng", 
+    price: 149000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-7ra0g-m7umz5u082v748.webp" 
+  },
+  { 
+    id: 2, 
+    name: "Váy Hai Dây VIERLIN Cúp Ngực 2 Lớp Dáng Dài Tiểu Thư", 
+    price: 249000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134201-7ras8-mamyg7k9ie2p02.webp" 
+  },
+  { 
+    id: 3, 
+    name: "Áo sơ mi nữ dài tay cổ trụ phối thành cà vạt điệu đà BRIYO SM43", 
+    price: 299000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m4gwwn94y5zj95.webp" 
+  },
+  { 
+    id: 4, 
+    name: "Quần jean ỐNG LOE Store lưng cao tôn dáng", 
+    price: 199000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-820l4-miibwqe0hfcx05.webp" 
+  },
+  { 
+    id: 5, 
+    name: "Sét bộ lụa latin tay dài quần dài , tay dập ly cao cấp", 
+    price: 159000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m0q88fr3npwt6d.webp" 
+  },
+  { 
+    id: 6, 
+    name: "Áo Thô Hàn Chấm Bi Tay Dài Xẻ, Tay Bồng Phong Cách Hoàn Quốc, Mặc Đi Làm, Đi Chơi", 
+    price: 219000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-820l4-mfinl10hxr0t64.webp" 
+  },
+  { 
+    id: 7, 
+    name: "Bộ Gió Nhún Bồng Crotop [Phom To Thụng Dài] Chùm Dép Thời Trang Thu Đông", 
+    price: 499000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-820l4-mffijfkeqayw7e.webp" 
+  },
+  { 
+    id: 8, 
+    name: "SOULIEE Áo Len Gấu Form Boxy Unisex Knit Bear Sweater", 
+    price: 399000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-820l4-miu9rcbvuvwh7a.webp" 
+  },
+  { 
+    id: 9, 
+    name: "Áo len lông thỏ hình thỏ phong cách ulzzang Hàn Quốc 24Feb Studio AK69", 
+    price: 298200, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltxmsgcm944ff2.webp" 
+  },
+  { 
+    id: 10, 
+    name: "Sét Lụa Latin Tay Dài Hàng Thiết Kế QCCC Free sz từ 40kg -60kg", 
+    price: 214000, 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-820l4-megug7ccejuv9d.webp" 
+  },
 ];
 
 // ================= STATE =================
