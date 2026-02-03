@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="checkout">
+  <h2 class="log">Đăng ký</h2>
+
+  <input type="text" id="reg-user" placeholder="Tên đăng nhập">
+  <input type="password" id="reg-pass" placeholder="Mật khẩu">
+  <input type="email" id="reg-email" placeholder="Email">
+
+
+  <button onclick="register()">Đăng ký</button>
+
+    <div class="divider"> 
+        <span>HOẶC</span> 
+    </div>
+
+    <div class="social-login"> 
+        <button class="social-btn fb"> 
+            <i class="fa-brands fa-facebook-f"></i> 
+            Facebook 
+        </button> 
+        <button class="social-btn google"> 
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt=""> 
+            Google 
+        </button> 
+    </div>
+
+  <p>
+    Đã có tài khoản?
+    <a href="login.html">Đăng nhập</a>
+  </p>
+</div>
+
+<script src="assets/js/auth.js"></script>
+<script>
+  const regUser = document.getElementById("reg-user");
+  const regPass = document.getElementById("reg-pass");
+
+  function register() {
+    const u = regUser.value.trim();
+    const p = regPass.value.trim();
+
+    if (!u || !p) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
+
+    Auth.register(u, p);
+    alert("Đăng ký thành công!");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

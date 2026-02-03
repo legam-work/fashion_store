@@ -53,6 +53,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
+  
 }
 
 /* ================= PRODUCTS ================= */
@@ -108,6 +109,7 @@ body {
 }
 
 /* ================= CART PAGE ================= */
+
 .cart-page {
   padding: 40px;
 }
@@ -226,10 +228,7 @@ mark {
   background: #dc3545;
 }
 
-h2 {
-  padding: 20px;
-  text-align: end;
-}
+
 
 .checkout {
   max-width: 400px;
@@ -265,6 +264,108 @@ h2 {
   margin-right: 20px;
   margin-bottom: 50px;
   display: block;
+}
+
+.back-btn {
+ 
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-weight: 1000;
+  font-size: 25px;
+  color: black;
+  z-index: 1000;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.auth a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+#welcome {
+  font-weight: 500;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider span {
+  margin: 0 12px;
+}
+
+/* SOCIAL LOGIN */
+.social-login {
+  display: flex;
+  gap: 15px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 4px;
+
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn.fb {
+  color: black;
+  background-color: #fff;
+  border: 1px solid #00000042;
+  border-radius: 5px;
+}
+
+.social-btn.fb i {
+  color: blue;
+}
+
+.social-btn.google {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #00000042;
+  border-radius: 5px;
+}
+
+.forget {
+  color:#333;
+}
+
+.log {
+  text-align: center;
+  padding: 30px 0;
 }
 
 @keyframes slideIn {

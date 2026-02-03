@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="checkout">
+  <h2 class="log">Đăng nhập</h2>
+
+  <input type="text" id="login-user" placeholder="Tên đăng nhập">
+  <input type="password" id="login-pass" placeholder="Mật khẩu">
+
+  <button onclick="login()">Đăng nhập</button>
+
+    <div class="divider"> 
+        <span>HOẶC</span> 
+    </div>
+
+    <div class="social-login"> 
+        <button class="social-btn fb"> 
+            <i class="fa-brands fa-facebook-f"></i> 
+            Facebook 
+        </button> 
+        <button class="social-btn google"> 
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt=""> 
+            Google 
+        </button> 
+    </div>
+  <p>
+    Chưa có tài khoản?
+    <a href="register.html">Đăng ký</a>
+  </p>
+</div>
+
+<script src="assets/js/auth.js"></script>
+<script>
+  const loginUser = document.getElementById("login-user");
+  const loginPass = document.getElementById("login-pass");
+
+  function login() {
+    const u = loginUser.value.trim();
+    const p = loginPass.value.trim();
+
+    if (Auth.login(u, p)) {
+      Auth.setUser(u);
+      window.location.href = "index.html";
+    } else {
+      alert("Sai tài khoản hoặc mật khẩu");
+    }
+  }
+</script>
+
+</body>
+</html>
