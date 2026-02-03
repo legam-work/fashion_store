@@ -19,3 +19,4 @@ const Store = {
     this.listeners.forEach(fn => fn(this.getCart()));
   }
 };
+

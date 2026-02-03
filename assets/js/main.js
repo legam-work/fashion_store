@@ -84,7 +84,14 @@ function ProductCard(p, keyword = "") {
       <img src="${p.image}">
       <h3>${p.name}</h3>
       <p>${p.price.toLocaleString()}đ</p>
-      <button onclick="addToCart(${p.id})">Thêm vào giỏ</button>
+      <div class="product-actions">
+        <button class="btn-add" onclick="addToCart(${p.id})">
+          Thêm vào giỏ
+        </button>
+        <button class="btn-buy" onclick="buyNow(${p.id})">
+          Mua ngay
+        </button>
+      </div>
     </div>
   `;
 }
