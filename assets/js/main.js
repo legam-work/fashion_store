@@ -1,3 +1,7 @@
+const searchInput = document.getElementById("searchInput");
+const priceFilter = document.getElementById("priceFilter");
+const sortPrice = document.getElementById("sortPrice");
+
 // ================= DATA =================
 const products = [
   { 
@@ -52,7 +56,7 @@ const products = [
     id: 9, 
     name: "Áo len lông thỏ hình thỏ phong cách ulzzang Hàn Quốc 24Feb Studio AK69", 
     price: 298200, 
-    image: "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltxmsgcm944ff2.webp" 
+    image: "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltxmsgcm944ff2.webp",
   },
   { 
     id: 10, 
@@ -77,12 +81,19 @@ const products = [
 // ================= STATE =================
 let state = { keyword: "", priceRange: "", sort: "" };
 
+// ================= HIGHLIGHT (FIX LỖI) =================
+function highlight(text, keyword) {
+  if (!keyword) return text;
+  const regex = new RegExp(`(${keyword})`, "gi");
+  return text.replace(regex, `<mark>$1</mark>`);
+}
+
 // ================= UI =================
-function ProductCard(product, keyword = "") {
+function ProductCard(product) {
   return `
     <div class="product">
       <img src="${product.image}">
-      <h3>${highlight(product.name, keyword)}</h3>
+      <h3>${highlight(product.name, state.keyword)}</h3>
       <p>${product.price.toLocaleString()}đ</p>
 
       <div class="product-actions">
@@ -98,21 +109,9 @@ function goDetail(id) {
 }
 
 function renderProducts(list) {
-  document.getElementById("product-list").innerHTML =
-    list.map(p => ProductCard(p)).join("");
-}
-
-// ================= CART =================
-function addToCart(id) {
-  const cart = Store.getCart();
-  const product = products.find(p => p.id === id);
-  const item = cart.find(i => i.id === id);
-
-  if (item) item.quantity++;
-  else cart.push({ ...product, quantity: 1 });
-
-  Store.setCart(cart);
-  showToast("Đã thêm vào giỏ");
+  const container = document.getElementById("product-list");
+  if (!container) return;
+  container.innerHTML = list.map(p => ProductCard(p)).join("");
 }
 
 // ================= FILTER =================
@@ -120,7 +119,9 @@ function applyFilters() {
   let result = [...products];
 
   if (state.keyword)
-    result = result.filter(p => p.name.toLowerCase().includes(state.keyword));
+    result = result.filter(p =>
+      p.name.toLowerCase().includes(state.keyword)
+    );
 
   if (state.priceRange) {
     const [min, max] = state.priceRange.split("-").map(Number);
@@ -134,24 +135,23 @@ function applyFilters() {
 }
 
 // ================= EVENTS =================
-searchInput.oninput = e => { state.keyword = e.target.value.toLowerCase(); applyFilters(); };
-priceFilter.onchange = e => { state.priceRange = e.target.value; applyFilters(); };
-sortPrice.onchange = e => { state.sort = e.target.value; applyFilters(); };
+if (searchInput)
+  searchInput.oninput = e => {
+    state.keyword = e.target.value.toLowerCase();
+    applyFilters();
+  };
 
-// ================= CART COUNT =================
-Store.subscribe(cart => {
-  const total = cart.reduce((s, i) => s + i.quantity, 0);
-  document.getElementById("cart-count").innerText = total;
-});
+if (priceFilter)
+  priceFilter.onchange = e => {
+    state.priceRange = e.target.value;
+    applyFilters();
+  };
+
+if (sortPrice)
+  sortPrice.onchange = e => {
+    state.sort = e.target.value;
+    applyFilters();
+  };
 
 // ================= INIT =================
 renderProducts(products);
-
-// ================= TOAST =================
-function showToast(msg) {
-  const toast = document.createElement("div");
-  toast.className = "toast success";
-  toast.innerText = msg;
-  document.getElementById("toast").appendChild(toast);
-  setTimeout(() => toast.remove(), 3000);
-}
