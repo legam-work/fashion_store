@@ -78,22 +78,23 @@ const products = [
 let state = { keyword: "", priceRange: "", sort: "" };
 
 // ================= UI =================
-function ProductCard(p, keyword = "") {
+function ProductCard(product, keyword = "") {
   return `
     <div class="product">
-      <img src="${p.image}">
-      <h3>${p.name}</h3>
-      <p>${p.price.toLocaleString()}đ</p>
+      <img src="${product.image}">
+      <h3>${highlight(product.name, keyword)}</h3>
+      <p>${product.price.toLocaleString()}đ</p>
+
       <div class="product-actions">
-        <button class="btn-add" onclick="addToCart(${p.id})">
-          Thêm vào giỏ
-        </button>
-        <button class="btn-buy" onclick="buyNow(${p.id})">
-          Mua ngay
-        </button>
+        <button onclick="goDetail(${product.id})">Thêm vào giỏ</button>
+        <button onclick="goDetail(${product.id})">Mua ngay</button>
       </div>
     </div>
   `;
+}
+
+function goDetail(id) {
+  window.location.href = `product.html?id=${id}`;
 }
 
 function renderProducts(list) {
