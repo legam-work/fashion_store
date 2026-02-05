@@ -1,1 +1,1 @@
-# fashion_store
+# glamora_boutique
