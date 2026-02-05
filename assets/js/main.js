@@ -97,8 +97,8 @@ function ProductCard(product) {
       <p>${product.price.toLocaleString()}đ</p>
 
       <div class="product-actions">
-        <button onclick="goDetail(${product.id})">Thêm vào giỏ</button>
-        <button onclick="goDetail(${product.id})">Mua ngay</button>
+        <button class="btn-cart" onclick="goDetail(${product.id})">Thêm vào giỏ</button>
+        <button class="btn-buy" onclick="goDetail(${product.id})">Mua ngay</button>
       </div>
     </div>
   `;
@@ -155,3 +155,5 @@ if (sortPrice)
 
 // ================= INIT =================
 renderProducts(products);
+
+

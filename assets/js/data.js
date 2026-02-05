@@ -16,5 +16,5 @@ const products = [
     desc: "Jean form suông",
     sizes: ["M", "L"],
     colors: ["Xanh", "Đen"]
-  }
+  },
 ];
