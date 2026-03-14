@@ -15,7 +15,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between ;
-  background: #0b0b0b;
+  background: #007bff;
   color: #fff;
   min-height: 100x;
   padding: 15px 30px;
@@ -276,7 +276,7 @@ mark {
 }
 
 .checkout button {
-  background: black;
+  background: #007bff;
   color: white;
   border: none;
   cursor: pointer;
@@ -285,7 +285,7 @@ mark {
 .btn-checkout {
   width: 190px;
   height: 60px;
-  background-color: #000;
+  background-color: #007bff;
   color: #fff;
   font-size: 25px;
   text-decoration: none;
@@ -438,7 +438,7 @@ mark {
 .product-detail button {
   padding: 12px 20px;
   margin-right: 10px;
-  background: black;
+  background: #007bff;
   color: white;
   border: none;
   cursor: pointer;
